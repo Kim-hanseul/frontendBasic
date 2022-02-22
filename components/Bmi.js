@@ -24,7 +24,7 @@ export default function Bmi(){
     <input id = "height" type="" /><br />
     <label htmlFor="">weight</label><br />
     <input id = "weight" type="" /><br />
-    <button onClick={()=>{sum()}}> 결과</button><br />
+    <button onClick={()=>{sum()}}> result</button><br />
     <div> result : {name} , {height} , {weight} </div>
 
     </div>

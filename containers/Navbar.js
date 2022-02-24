@@ -16,15 +16,15 @@ export default function Navbar(){
 </div>)
 }
 const Ul = styled.ul`
-  background-color: white;
+  background-color: #FFDAB9;
   text-decoration: none;
   text-align: center;
 `
 
 const Li = styled.li`
-  float: center;
+  float: left;
   margin-left: 1em;
   font-size: 20px;
   text-align: center;
   display: inline-block
-  `
+`

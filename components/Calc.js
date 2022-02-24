@@ -6,9 +6,9 @@ export default function Calc(){
     const [opcode,setOpcode] = useState("")
     const [result,setResult] = useState(0)
     const sum =()=> {
-        let num1 = (document.getElementById('num1').value)
+        let num1 = document.getElementById('num1').value
         console.log('숫자 1 : ' +num1)
-        let num2 = (document.getElementById('num2').value)
+        let num2 = document.getElementById('num2').value
         console.log('숫자 2 : ' +num2)
         setNum1(num1)
         setNum2(num2)

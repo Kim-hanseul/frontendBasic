@@ -7,10 +7,13 @@ export default function Calc(){
     const [result,setResult] = useState(0)
     const sum =()=> {
         let num1 = (document.getElementById('num1').value)
+        console.log('숫자 1 : ' +num1)
         let num2 = (document.getElementById('num2').value)
+        console.log('숫자 2 : ' +num2)
         setNum1(num1)
         setNum2(num2)
         setResult(Number(num1) + Number(num2))
+        console.log('결과 : '+result )
         
     }
      return <Layout><h1>Calc form</h1>
@@ -33,7 +36,7 @@ export default function Calc(){
     
     <button onClick={()=>{sum()}}> 계산 실행 </button>
     </form>
-    <div> result : {num1} + {num2} = {result} </div>
+    <div> result : ! </div>
     
     
     </Layout>

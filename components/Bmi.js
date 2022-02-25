@@ -1,11 +1,10 @@
 import React, {useState} from 'react' 
 import Layout from '../containers/Layout';
-import axios  from 'axios';
-import { useLinkClickHandler } from 'react-router-dom';
+import {memberBmi} from '../api/index'
 export default function Bmi(){
 
     const [inputs, setInputs ] = useState({})
-    const{name, weight, height} = inputs; // Object Destructuring
+    const{name, weight, height} = inputs; 
     
     const handleChange =(e)=> {
         e.preventDefault()
@@ -17,8 +16,10 @@ export default function Bmi(){
     const handleClick = (e) => {
         e.preventDefault()
         const bmiRequest = {name, weight, height}
-        alert(` username : ${JSON.stringify(bmiRequest)}`)
-        
+        console.log(` insert result : ${JSON.stringify(bmiRequest)}`)
+        memberBmi(bmiRequest)
+        .then(res=>{alert(res.data)})
+        .catch(err=>console.log(`error : ${err}`))
         /*
         axios.get(`http://localhost:8080/member/bmi`)
             .then((res)=>{
